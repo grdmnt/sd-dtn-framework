@@ -12,4 +12,5 @@ def sync():
 def packet_in():
     if request.method == 'POST':
         saved_bundles.append(request.data)
+        print saved_bundles
         return request.data
