@@ -16,5 +16,6 @@ def packet_in():
     if request.method == 'POST':
         saved_bundles = cache.get('saved_bundles')
         saved_bundles.append(request.data)
+        print(saved_bundles)
         cache.set('saved_bundles', saved_bundles)
         return str(saved_bundles)
