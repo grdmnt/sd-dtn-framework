@@ -20,7 +20,7 @@ def sync():
         if flow["flowId"] not in flowIds:
             filtered.append(flow)
 
-    return str(filtered)
+    return json.dumps(filtered)
 
 @app.route('/packet_in', methods=['POST'])
 def packet_in():
