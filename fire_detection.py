@@ -123,10 +123,8 @@ class FireDetection(SDDTN):
             'time_received': 123,
             'datapoints': '1'
         }
-        x.sim_call(packet)
-        pp.pprint(x.get_flow_table('172.24.1.3'))
-        x.sim_call(packet1)
-        pp.pprint(x.get_flow_table('172.24.1.2'))
+        pp.pprint(x.sim_call(packet))
+        pp.pprint(x.sim_call(packet1))
 
 x = FireDetection(2)
 x.demo()

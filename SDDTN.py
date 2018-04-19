@@ -26,11 +26,11 @@ class SDDTN:
 
     def sim_call(self, request):
         if request['event_type'] == 0:
-            self.packet_in(request)
+            return self.packet_in(request)
         elif request['event_type'] == 1:
-            self.alive(request)
+            return self.alive(request)
         elif request['event_type'] == 2:
-            self.boot(request)
+            return self.boot(request)
 
     def install_flow(self, ip_address, flow):
         self.__validate_ip_address(ip_address)
